@@ -1,6 +1,8 @@
 import os
 import argparse
 import datetime
+import numpy as np
+import matplotlib.pyplot as plt
 
 def read_budget():
     '''Read the file and return the last thing written.'''
@@ -38,6 +40,28 @@ def update_allotment(new_amount):
         for line in contents:
             file.write(line)
 
+def visualize_budget():
+    '''Plot the budget versus date.'''
+    with open("budget.txt", 'r') as file:
+        contents = file.readlines()
+
+    data_points = dict()
+    for line in contents[1:]:
+        date = line.split(':')[0]
+        budget = float(line.split()[-1])
+        # This will only keep the last value from budget.txt with a given date.
+        data_points[date] = budget
+    # Get the dates from the dictionary.
+    dates = list(data_points.keys())
+    # Get the values.
+    data_points = list(data_points.values())
+
+    # Plot the dates and values.
+    plt.plot(dates, data_points)
+    plt.ylabel("Amount ($)")
+    plt.xlabel("Time")
+    plt.show()
+
 def main():
     # Get the current budget.
     budget = read_budget()
@@ -64,6 +88,11 @@ def main():
         "--update",
         type=float,
         help="Update the weekly allotment to the provided value.")
+    parser.add_argument(
+        "-p",
+        "--plot",
+        action="store_true",
+        help="Plot the recorded budget updates, amount versus date.")
     args = parser.parse_args()
 
     # Perform functions based on provided arguments.
@@ -79,6 +108,8 @@ def main():
         write_budget(budget)
     if args.update:
         update_allotment(args.update)
+    if args.plot:
+        visualize_budget()
 
     # Print the budget after performing functions.
     print(
