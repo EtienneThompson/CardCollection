@@ -1,1 +1,4 @@
 *.txt
+geckodriver.log
+*pycache*
+*pytest_cache*
