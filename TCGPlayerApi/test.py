@@ -1,19 +1,25 @@
 import unittest
 from tcgplayerapi import TCGPlayerAPI
 
-class TestTCGPlayerApi(unittest.TestCase):
+class TestTCGPlayerAPI(unittest.TestCase):
     def setUp(self):
         self.api = TCGPlayerAPI()
 
     def test_single_generic_get(self):
-        price = self.api.get("Korvold, Fae-Cursed King")
+        price = self.api.get_price("Korvold, Fae-Cursed King")
         assert price[0] != [-1]
 
     def test_single_specific_get(self):
-        pass
+        price = self.api.get_price(
+            "Najeela, the Blade-Blossom", card_set="Battlebond")
+        assert price[0] != [-1]
 
-    def test_single_fail_get(self):
-        price = self.api.get("njbcihjlq./O K9iuo4ijckemw")
+    def test_single_fail_generic_get(self):
+        price = self.api.get_price("njbcihjlq./O K9iuo4ijckemw")
+        assert price[0] == -1
+
+    def test_single_fail_specific_get(self):
+        price = self.api.get_price("rbchiejlq;v", card_set="Battlebond")
         assert price[0] == -1
 
     def test_multiple_generic_gets(self):
