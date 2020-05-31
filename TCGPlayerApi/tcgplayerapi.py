@@ -122,6 +122,7 @@ class TCGPlayerAPI():
 
     def get_set_price(self, card_query, card_set):
         """Gets a single card's information from a set specific endpoint."""
+        card_set = "-".join(card_set.split(" "))
         endpoint = f"{self.set_url}{card_set.lower()}/{card_query}"
         print(endpoint)
         prices = list()
