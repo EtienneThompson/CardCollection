@@ -1,0 +1,9 @@
+.box {
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

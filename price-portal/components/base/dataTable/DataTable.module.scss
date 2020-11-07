@@ -1,0 +1,17 @@
+.container {
+    padding: 20px;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 20%;
+}

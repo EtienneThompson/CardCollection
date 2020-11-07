@@ -1,0 +1,72 @@
+[
+    {
+        "cardName": "Breeding Pool",
+        "cardSet": "Ravnica Allegiance",
+        "quantity": 4,
+        "indivPrice": 19.46,
+        "totalPrice": 77.84
+    },
+    {
+        "cardName": "Steam Vents",
+        "cardSet": "Guilds of Ravnica",
+        "quantity": 4,
+        "indivPrice": 10.70,
+        "totalPrice": 48.20
+    },
+    {
+        "cardName": "Stomping Ground",
+        "cardSet": "Ravnica Allegiance",
+        "quantity": 5,
+        "indivPrice": 7.42,
+        "totalPrice": 37.10
+    },
+    {
+        "cardName": "Godless Shrine",
+        "cardSet": "Ravnica Allegiance",
+        "quantity": 1,
+        "indivPrice": 7.46,
+        "totalPrice": 7.46
+    },
+    {
+        "cardName": "Watery Grave",
+        "cardSet": "Guilds of Ravnica",
+        "quantity": 1,
+        "indivPrice": 8.72,
+        "totalPrice": 8.72
+    },
+    {
+        "cardName": "Hallowed Fountain",
+        "cardSet": "Ravnica Allegiance",
+        "quantity": 1,
+        "indivPrice": 7.48,
+        "totalPrice": 7.48
+    },
+    {
+        "cardName": "Sacred Foundry",
+        "cardSet": "Guilds of Ravnica",
+        "quantity": 2,
+        "indivPrice": 11.43,
+        "totalPrice": 22.86
+    },
+    {
+        "cardName": "Overgrown Tomb",
+        "cardSet": "Guilds of Ravnica",
+        "quantity": 2,
+        "indivPrice": 10.31,
+        "totalPrice": 20.62
+    },
+    {
+        "cardName": "Temple Garden",
+        "cardSet": "Guilds of Ravnica",
+        "quantity": 1,
+        "indivPrice": 9.95,
+        "totalPrice": 9.95
+    },
+    {
+        "cardName": "Blood Crypt",
+        "cardSet": "Ravnica Allegiance",
+        "quantity": 3,
+        "indivPrice": 14.11,
+        "totalPrice": 42.33
+    }
+]
