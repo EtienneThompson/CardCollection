@@ -1,6 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
+
 class Collections(APIView):
     """Class for interacting with the Collections Database."""
 

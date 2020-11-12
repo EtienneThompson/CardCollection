@@ -1,6 +1,14 @@
 *.txt
+
+# Selenium log from running Headless Firefox.
 geckodriver.log
+
 *pycache*
 *pytest_cache*
 *egg-info*
 *build*
+
+# Django ignores.
+migrations
+.vscode
+secrets.py
